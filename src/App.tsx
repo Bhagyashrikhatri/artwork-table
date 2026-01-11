@@ -156,7 +156,7 @@ const ArtworkTable: React.FC = () => {
             <InputNumber
               id="selectCount"
               value={selectCount}
-              onValueChange={(e) => setSelectCount(e.value)}
+              onValueChange={(e) => setSelectCount(e.value ?? null)}
               placeholder="Enter number"
               style={{ marginBottom: '10px', width: '100%' }}
             />
@@ -186,6 +186,7 @@ const ArtworkTable: React.FC = () => {
         dataKey="id"
         header={header}
         tableStyle={{ minWidth: '60rem' }}
+        selectionMode="multiple"
       >
         <Column selectionMode="multiple" headerStyle={{ width: '3rem' }} />
         <Column field="title" header="Title" style={{ minWidth: '200px' }} />
