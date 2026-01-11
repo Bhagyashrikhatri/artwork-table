@@ -38,7 +38,7 @@ const ArtworkTable: React.FC = () => {
   const [first, setFirst] = useState(0);
   const [rows] = useState(12);
   
-  // Selection strategy: Store selected and deselected IDs only
+  // Selection strategy: Store selected IDs only
   const [selectedIds, setSelectedIds] = useState<Set<number>>(new Set());
   const [selectCount, setSelectCount] = useState<number | null>(null);
   
